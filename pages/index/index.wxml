@@ -2,6 +2,6 @@
 <navigation-bar title="咖啡续命" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
-	  首页
+	  首页ewq
   </view>
 </scroll-view>
