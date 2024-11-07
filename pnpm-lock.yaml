@@ -1,0 +1,31 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@vant/weapp':
+        specifier: ^1.11.7
+        version: 1.11.7
+    devDependencies:
+      miniprogram-api-typings:
+        specifier: ^4.0.1
+        version: 4.0.1
+
+packages:
+
+  '@vant/weapp@1.11.7':
+    resolution: {integrity: sha512-Rwn9BBnb4kHSV4XmvBicwtd42J+amEUfnFDcXJsGNPNX4a9c/DoT6YLsm4X1wB2+sQbdiQsbFBLAvGRBxCkD8g==}
+
+  miniprogram-api-typings@4.0.1:
+    resolution: {integrity: sha512-Ok4SSNCYnNLgbAhHCpIeqx6XICZ3aUxZ2iQDExmwKEinWaQQFzzxobK5JP9skrEOWn9PoKodjw4iUdF8Um0i/A==}
+
+snapshots:
+
+  '@vant/weapp@1.11.7': {}
+
+  miniprogram-api-typings@4.0.1: {}
