@@ -6,6 +6,16 @@
 		"pages/demo1/demo1",
 		"pages/demo2/demo2"
 	],
+	"requiredPrivateInfos": [ 
+	    "getLocation",
+	    "onLocationChange",
+	    "startLocationUpdateBackground",
+	    "chooseAddress"
+	],
+	"requiredBackgroundModes": [
+		"audio", 
+		"location"
+	],
 	"window":{
 	    "backgroundTextStyle":"light",
 	    "navigationBarBackgroundColor": "#fff",
