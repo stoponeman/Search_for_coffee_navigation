@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "navigation-bar": "/components/navigation-bar/navigation-bar"
+    "navigation-bar": "/components/navigation-bar/navigation-bar",
+	"van-button": "@vant/weapp/button/index"
   },
   "navigationBarBackgroundColor": "#ffffff",
   "navigationBarTextStyle": "black",
@@ -8,4 +9,5 @@
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light",
   "navigationStyle":"custom"
+  
 }
