@@ -173,12 +173,27 @@
 .item-right {
     display: flex;
     align-items: center;
+
+
+}
+button {
+    padding: 0;
+    text-align: right;
+    padding-right: 10rpx;
 }
 
 .extra-info {
     font-size: 26rpx;
     color: #999;
     margin-right: 8rpx;
+    padding: 0;
+}
+
+.extra-btn {
+    font-size: 26rpx;
+    color: #999;
+    margin-right: 8rpx;
+    background: white;
 }
 
 .arrow {

@@ -54,6 +54,12 @@ Page({
                 name: '学生专区',
                 icon: '/images/student.png',
                 extra: '学生专属 超多优惠'
+            },
+            {
+                id: 10,
+                name: '我的客服',
+                icon: '/images/student.png',
+                extra: '客服24小时在线'
             }
         ]
     },
@@ -67,7 +73,7 @@ Page({
         this.setData({
             statusBarHeight: systemInfo.statusBarHeight
         });
-        
+
         // 检查是否有缓存的用户信息
         const userInfo = wx.getStorageSync('userInfo');
         const phoneNumber = wx.getStorageSync('phoneNumber');
@@ -137,14 +143,14 @@ Page({
 
     // 处理功能项点击
     handleFunctionClick(e) {
-        const { id } = e.currentTarget.dataset;
+        const {id} = e.currentTarget.dataset;
         // 根据id处理不同功能的跳转
-        switch(id) {
+        switch (id) {
             case 1: // 我的行程
-                wx.navigateTo({ url: '/pages/trips/trips' });
+                wx.navigateTo({url: '/pages/trips/trips'});
                 break;
             case 2: // 开发票
-                wx.navigateTo({ url: '/pages/invoice/invoice' });
+                wx.navigateTo({url: '/pages/invoice/invoice'});
                 break;
             // ... 其他功能项的处理
         }

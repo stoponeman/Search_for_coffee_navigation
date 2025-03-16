@@ -51,8 +51,12 @@
                     <image src="{{item.icon}}" mode="aspectFit" class="function-icon"/>
                     <text class="function-text">{{item.name}}</text>
                 </view>
-                <view class="item-right">
+                <view class="item-right" wx:if="{{item.id !== 10}}">
                     <text class="extra-info" wx:if="{{item.extra}}">{{item.extra}}</text>
+                    <text class="arrow">></text>
+                </view>
+                <view class="item-right" wx:else>
+                    <button class="extra-btn" open-type="contact" wx:if="{{item.extra}}">{{item.extra}}</button>
                     <text class="arrow">></text>
                 </view>
             </view>
