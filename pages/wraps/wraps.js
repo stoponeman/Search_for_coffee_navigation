@@ -1,4 +1,4 @@
-// pages/demo2/demo2.js
+// pages/wraps/wraps.js
 Page({
 
     /**

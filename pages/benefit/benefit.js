@@ -1,4 +1,4 @@
-// pages/demo1/demo1.js
+// pages/benefit/benefit.js
 Page({
 
     /**

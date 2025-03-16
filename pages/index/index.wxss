@@ -1,4 +1,18 @@
 /**index.wxss**/
 page {
-  height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+
+}
+
+.map-container {
+    width: 100%;
+    height: 500rpx;
+}
+
+.body-container {
+    width: 100%;
+    flex: 1;
 }
