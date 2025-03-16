@@ -5,8 +5,10 @@ Page({
      * 页面的初始数据
      */
     data: {
-        longitude: 116.397428,  // 初始经度（北京天安门）
-        latitude: 39.90923,
+        statusBarHeight: '',
+        navBarHeight: '',
+        longitude: '',  // 初始经度（北京天安门）
+        latitude: '',
         scale: 3,
         markers: [],
         address: '',
@@ -42,7 +44,7 @@ Page({
                         }
                     }]
                 });
-                // this.reverseGeocoding(longitude, latitude);
+                this.reverseGeocoding(longitude, latitude);
                 this.mapContext = wx.createMapContext('myMap', this);
                 this.mapContext.includePoints({
                     points: [{longitude, latitude}],
@@ -114,6 +116,15 @@ Page({
      */
     onLoad(options) {
         this.getLocation();
+        const app = getApp()
+
+        // 直接访问 globalData.headerInfo
+        const {statusBarHeight, navBarHeight} = app.globalData.headerInfo
+        this.setData({
+            statusBarHeight,
+            navBarHeight,
+        })
+        console.log(statusBarHeight, navBarHeight);
     },
 
     /**

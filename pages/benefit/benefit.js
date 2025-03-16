@@ -62,5 +62,12 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+
+    goToOrder() {
+        // 跳转到点单页面
+        wx.switchTab({
+            url: '/pages/index/index'
+        })
     }
 })

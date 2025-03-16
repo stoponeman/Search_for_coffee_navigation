@@ -1,2 +1,76 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="container">
+    <!-- 自定义头部导航 -->
+    <view class="header" style="padding-top: {{statusBarHeight}}px;">
+        <text class="header-text">个人中心</text>
+    </view>
+
+    <!-- 用户信息 -->
+    <view class="user-info">
+        <block wx:if="{{userInfo}}">
+            <image src="{{userInfo.avatarUrl || '/images/avatar.png'}}" mode="aspectFill" class="avatar"/>
+            <view class="user-detail">
+                <text class="username">{{userInfo.nickName || '未设置昵称'}}</text>
+                <text class="user-id">{{phoneNumber || '未绑定手机号'}}</text>
+            </view>
+        </block>
+        <block wx:else>
+            <image src="/images/avatar.png" mode="aspectFill" class="avatar"/>
+            <view class="user-detail">
+                <button class="login-btn" bindtap="getUserProfile">点击登录</button>
+            </view>
+        </block>
+    </view>
+
+    <!-- 未登录时隐藏会员卡片 -->
+    <block wx:if="{{userInfo}}">
+        <!-- 会员卡片 -->
+        <view class="member-card">
+            <view class="member-title">
+                <text class="title-text">优享会员</text>
+                <image src="/images/vip.png" mode="aspectFit" class="vip-icon"/>
+            </view>
+            <view class="member-info">
+                <view class="member-progress">
+                    <text>0/10</text>
+                    <text class="progress-desc">当前经验0，还需10升级白银</text>
+                </view>
+                <view class="member-miles">
+                    <text class="miles-num">0</text>
+                    <text class="miles-text">里程</text>
+                    <text class="miles-desc">获得里程可以兑换打车权益</text>
+                    <text class="check-rights">查看权益></text>
+                </view>
+            </view>
+        </view>
+
+        <!-- 功能列表 -->
+        <view class="function-list">
+            <view class="function-item" wx:for="{{functionList}}" wx:key="id">
+                <view class="item-left">
+                    <image src="{{item.icon}}" mode="aspectFit" class="function-icon"/>
+                    <text class="function-text">{{item.name}}</text>
+                </view>
+                <view class="item-right">
+                    <text class="extra-info" wx:if="{{item.extra}}">{{item.extra}}</text>
+                    <text class="arrow">></text>
+                </view>
+            </view>
+        </view>
+    </block>
+
+    <!-- 未登录时只显示平台协议 -->
+    <block wx:else>
+        <view class="function-list">
+            <view class="function-item">
+                <view class="item-left">
+                    <image src="/images/agreement.png" mode="aspectFit" class="function-icon"/>
+                    <text class="function-text">平台协议</text>
+                </view>
+                <view class="item-right">
+                    <text class="arrow">></text>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

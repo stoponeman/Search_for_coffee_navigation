@@ -62,5 +62,12 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+
+    goToTask() {
+        // 跳转到任务页面
+        wx.switchTab({
+            url: '/pages/index/index'
+        })
     }
 })

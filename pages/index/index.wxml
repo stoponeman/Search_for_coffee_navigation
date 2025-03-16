@@ -1,4 +1,6 @@
-<navigation-bar title="咖啡续命" back="{{false}}" color="black" background="none"></navigation-bar>
+<view class="header" style="padding-top: {{statusBarHeight}}px; height: {{navBarHeight}}px;">
+    <text class="header-text">快去喝咖啡了</text>
+</view>
 <view class="map-container">
     <map
             id="myMap"
@@ -7,8 +9,100 @@
             scale="{{scale}}"
             markers="{{markers}}"
             style="width: 100%; height: 100%;"
-    ></map>
+    />
 </view>
 <view class="body-container">
+    <view class="search-container">
+        <view class="search-box">
+            <view class="search-icon">
+                <image src="/images/location.png" mode="aspectFit" class="location-icon"/>
+            </view>
+            <input
+                    type="text"
+                    placeholder="你要去哪儿来一杯"
+                    placeholder-class="placeholder-style"
+                    class="search-input"
+            />
+        </view>
+    </view>
 
+    <!-- 功能图标区域 -->
+    <view class="function-grid">
+        <view class="grid-row">
+            <view class="grid-item">
+                <view class="icon-wrapper" style="background: rgba(76, 217, 169, 0.1)">
+                    <image src="/images/reserve.png" mode="aspectFit" class="function-icon"/>
+                </view>
+                <text class="function-text">预约</text>
+            </view>
+            <view class="grid-item">
+                <view class="icon-wrapper" style="background: rgba(47, 255, 214, 0.1)">
+                    <image src="/images/reserve.png" mode="aspectFit" class="function-icon"/>
+                </view>
+                <text class="function-text">预约</text>
+            </view>
+            <view class="grid-item">
+                <view class="icon-wrapper" style="background: rgba(183, 157, 255, 0.1)">
+                    <image src="/images/reserve.png" mode="aspectFit" class="function-icon"/>
+                </view>
+                <text class="function-text">预约</text>
+            </view>
+            <view class="grid-item">
+                <view class="icon-wrapper" style="background: rgba(255, 190, 173, 0.1)">
+                    <image src="/images/reserve.png" mode="aspectFit" class="function-icon"/>
+                </view>
+                <text class="function-text">预约</text>
+            </view>
+            <view class="grid-item">
+                <view class="icon-wrapper" style="background: rgba(99, 148, 255, 0.1)">
+                    <image src="/images/reserve.png" mode="aspectFit" class="function-icon"/>
+                </view>
+                <text class="function-text">预约</text>
+            </view>
+        </view>
+        <view class="grid-row">
+            <view class="grid-item">
+                <view class="icon-wrapper" style="background: rgba(99, 148, 255, 0.1)">
+                    <image src="/images/reserve.png" mode="aspectFit" class="function-icon"/>
+                </view>
+                <text class="function-text">预约</text>
+            </view>
+            <view class="grid-item">
+                <view class="icon-wrapper" style="background: rgba(255, 190, 173, 0.1)">
+                    <image src="/images/reserve.png" mode="aspectFit" class="function-icon"/>
+                </view>
+                <text class="function-text">预约</text>
+            </view>
+            <view class="grid-item">
+                <view class="icon-wrapper" style="background: rgba(255, 198, 102, 0.1)">
+                    <image src="/images/reserve.png" mode="aspectFit" class="function-icon"/>
+                </view>
+                <text class="function-text">预约</text>
+            </view>
+            <view class="grid-item"/>
+            <view class="grid-item"/>
+        </view>
+    </view>
+
+    <view class="section-title">活动专区</view>
+    <view class="activity-section">
+        <view class="activity-grid">
+            <view class="activity-item">
+                <image src="/images/activity2.png" mode="aspectFill" class="activity-image"/>
+                <view class="activity-info">
+                    <text class="activity-title">限时特惠</text>
+                    <text class="activity-desc">新人专享优惠</text>
+                </view>
+            </view>
+            <view class="activity-item">
+                <image src="/images/activity1.png" mode="aspectFill" class="activity-image"/>
+                <view class="activity-info">
+                    <text class="activity-title">咖啡优惠</text>
+                    <text class="activity-desc">下单立减5元</text>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>
+
+

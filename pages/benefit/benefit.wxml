@@ -1,2 +1,30 @@
 <!--pages/benefit/benefit.wxml-->
-<text>pages/benefit/benefit.wxml</text>
+<view class="container">
+    <view class="empty-state">
+        <image src="/images/empty-benefit.png" mode="aspectFit" class="empty-image" />
+        <view class="empty-content">
+            <view class="empty-title">暂无可用福利</view>
+            <view class="empty-desc">完成订单可以获得更多福利哦</view>
+        </view>
+        <view class="benefits-tips">
+            <view class="tips-item">
+                <view class="tips-icon">🎁</view>
+                <view class="tips-text">下单得积分</view>
+            </view>
+            <view class="tips-item">
+                <view class="tips-icon">🌟</view>
+                <view class="tips-text">积分换好礼</view>
+            </view>
+            <view class="tips-item">
+                <view class="tips-icon">🎯</view>
+                <view class="tips-text">专属优惠</view>
+            </view>
+        </view>
+        <view class="action-button" bindtap="goToOrder">
+            <text>去下单</text>
+            <text class="arrow">></text>
+        </view>
+    </view>
+</view>
+
+
